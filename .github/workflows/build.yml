@@ -1,0 +1,34 @@
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+name: Build
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: Build binary
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - 'ubuntu-latest'
+          - 'macos-latest'
+          - 'windows-latest'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Get OS info
+        run: |
+          BINARY_NAME=${{github.repository}}-$(echo ${{matrix.os}} | sed 's/-latest//')
+          echo "BINARY_NAME=$BINARY_NAME" >> $GITHUB_ENV
+      - name: Build
+        run: |
+          go build -o "$BINARY_NAME" -v
