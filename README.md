@@ -1,0 +1,3 @@
+[![Build](https://github.com/jidicula/template-go/actions/workflows/build.yml/badge.svg)](https://github.com/jidicula/template-go/actions/workflows/build.yml) [![Latest Release](https://github.com/jidicula/template-go/actions/workflows/release-draft.yml/badge.svg)](https://github.com/jidicula/template-go/actions/workflows/release-draft.yml) [![Go Report Card](https://goreportcard.com/badge/github.com/jidicula/template-go)](https://goreportcard.com/report/github.com/jidicula/template-go) [![Go Reference](https://pkg.go.dev/badge/github.com/jidicula/template-go.svg)](https://pkg.go.dev/github.com/jidicula/template-go)
+
+# template-go
