@@ -71,7 +71,7 @@ jobs:
         run: |
           go build -o "$BINARY_NAME" -v
       - name: Release with Notes
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           body_path: ".github/RELEASE-TEMPLATE.md"
           draft: true
